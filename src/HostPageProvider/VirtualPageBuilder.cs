@@ -3,7 +3,7 @@ using HostPageProvider.Templating;
 
 public class VirtualPageBuilder
 {
-    private VirtualPageConfiguration Config { get; }= new();
+    protected VirtualPageConfiguration Config { get; }= new();
 
     public VirtualPageBuilder AddStylesheet(string stylesheetHref) {
         Config.Stylesheets.Add(stylesheetHref);

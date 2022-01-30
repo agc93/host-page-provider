@@ -18,7 +18,7 @@ internal class XmlPageGenerator : IPageGenerator
         var title = new XElement("title", pageConfiguration.Title ?? "Razor app");
         var baseHref = new XElement("base", new XAttribute("href", pageConfiguration.BasePath));
         var stylesheets = pageConfiguration.Stylesheets.Select(ss =>
-            new XElement("link", new XAttribute("ref", "stylesheet"), new XAttribute("href", ss)));
+            new XElement("link", new XAttribute("rel", "stylesheet"), new XAttribute("href", ss)));
         var styles = new XElement("style", pageConfiguration.RawStyles.ToStyles());
         var headElement = new XElement("head", meta, metaView, title, baseHref, stylesheets, styles);
         htmlElement.Add(headElement);

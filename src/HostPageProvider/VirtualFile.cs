@@ -12,7 +12,7 @@ public class VirtualFile : IFileInfo
     public VirtualFile(string filePath, string? generatedFileContents) {
         _contents = generatedFileContents;
         _filePath = filePath;
-        Exists = string.IsNullOrWhiteSpace(_contents);
+        Exists = !string.IsNullOrWhiteSpace(_contents);
         Length = Exists ? _contents?.Length ?? -1 : -1;
         Name = Path.GetFileName(filePath);
         _created = DateTimeOffset.Now;
@@ -26,5 +26,5 @@ public class VirtualFile : IFileInfo
     public bool IsDirectory => false;
 
     public Stream CreateReadStream()
-        => new MemoryStream(System.Text.Encoding.UTF8.GetBytes(_contents));
+        => new MemoryStream(System.Text.Encoding.UTF8.GetBytes(_contents ?? string.Empty));
 }

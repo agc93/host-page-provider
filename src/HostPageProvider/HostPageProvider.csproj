@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <LangVersion>10</LangVersion>
+    <IsPackable>true</IsPackable>
+    <IsPublishable>false</IsPublishable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.FileProviders.Abstractions" Version="5.0.0" />
+  </ItemGroup>
+  
+  <PropertyGroup>
+    <Description>A lightweight library for generating "host" pages for use in Blazor and other scenarios.</Description>
+    <Authors>agc93</Authors>
+    <Copyright>© Alistair Chapman 2022</Copyright>
+    <PackageTags>blazor;webview2;</PackageTags>
+    <RepositoryUrl>https://github.com/agc93/host-page-provider</RepositoryUrl>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/agc93/host-page-provider</PackageProjectUrl>
+  </PropertyGroup>
+
+</Project>
